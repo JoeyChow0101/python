@@ -79,3 +79,31 @@ for requested_topping in requested_toppings:
         print("Sorry, we don't have " + requested_topping + ".")
 print("Finish making your pizza~!")
 print("====================")
+
+user_names= ['admin', 'Eric', 'Horatio',
+            'Jason', 'Howard']
+login_name = 'admin'
+
+if login_name == '':
+    print("We need to find some users!")
+else:
+    if login_name in user_names:
+        print("Hello admin, would you like to see a status report?")
+    else:
+        print("Hello Eric, thank you for logging in again.")
+print("====================")
+
+current_users = ['admin', 'Eric', 'Horatio',
+            'Jason', 'Howard', 'John']
+new_users = ['admin', 'Eric', 'Robin',
+            'Arthur', 'Charles', 'JOHN']
+
+for new_user in new_users: 
+    if new_user in current_users:
+        print("Please input another user name.")
+    elif new_user.lower() in (current_user.lower() for current_user in current_users):
+        print("User " + new_user + " is rejected.")
+    else:
+        print("User name " + new_user + " is unused.")
+
+
